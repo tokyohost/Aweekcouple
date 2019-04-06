@@ -13,7 +13,7 @@ USED:
 使用Node.js + Express + MongoDB搭建的网站。没有使用Pug模板，而是在客户端使用了Vue来渲染。
 ## Usage
 ```
-下载 code.zip 解压缩
+
 $ npm install
 $ node app.js
 ```
