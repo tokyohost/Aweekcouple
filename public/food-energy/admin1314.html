@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>报名结果</title>
+  <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div  width="500" class="container" id="app">
+    <div class="page-header">
+      <h1>报名情况<small>一周情侣</small></h1>
+    </div>
+    <table border="1" cellspacing="10">
+      <thead>
+        <tr>
+          <th align="center">姓名</th>
+          <th align="center">学号</th>
+           <th align="center">QQ号</th>
+          <th align="center">电话</th>
+          <th align="center">邮箱</th>
+          <th align="center">民族</th>
+          <th align="center">班级</th>
+          <th align="center">微信号</th>
+          <th align="center">性别("1"为男，"on"为女)</th>
+          <th align="center">希望的匹配对象</th>
+          <th align="center">自己的优点</th>
+          <th align="center">报名时间</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="entry in results">
+          <td align="center">
+            <span  align="center">{{entry.name}}</span><!--姓名-->
+          </td>
+          <td align="center">
+            <span>{{entry.number}}</span><!--学号-->
+          </td>
+           <td align="center">
+            <span>{{entry.qq}}</span><!--QQ号-->
+          </td>
+          <td align="center">
+            <span>{{entry.phone}}</span><!--电话-->
+            </td>
+          <td align="center">
+            <span>{{entry.email}}</span><!--邮箱-->
+          </td>
+          <td align="center">
+            <span>{{entry.minzu}}</span><!--民族-->
+          </td>
+          <td align="center">
+            <span>{{entry.title}}</span><!--班级-->
+          </td>
+          <td align="center">
+            <span>{{entry.netpan}}</span><!--微信号-->
+          </td>
+          <td align="center">
+            <span>{{entry.desc}}</span><!--性别-->
+          </td>
+         <td align="center">
+            <span>{{entry.info}}</span><!--希望匹配的对象-->
+          </td>
+          <td align="center">
+            <span>{{entry.meinfo}}</span><!--自己的优点-->
+          </td>
+          <td align="center">
+            <span>{{entry.date | getDate}}</span><br><!--报名时间-->
+            <span>{{entry.date | getTime}}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="http://cdn.bootcss.com/vue/2.2.6/vue.min.js"></script>
+  <script src="/scripts/food-admin.js" charset="utf-8"></script>
+</body>
+</html>

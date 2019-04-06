@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+                       ::
+                      :;J7, :,                        ::;7:
+                      ,ivYi, ,                       ;LLLFS:						项目：连云港职业技术学院一周情侣活动在线报名
+                      :iv7Yi                       :7ri;j5PL						语言：HTML
+                     ,:ivYLvr                    ,ivrrirrY2X,						框架：mongo + css +html+linux
+                     :;r@Wwz.7r:                :ivu@kexianli.						构建工具：Visual Studio 2017
+                    :iL7::,:::iiirii:ii;::::,,irvF7rvvLujL7ur						服务器环境：Centos 7.2 + mongo2.2 + nodejs
+                   ri::,:,::i:iiiiiii:i:irrv177JX7rYXqZEkvv17						代码风格：瞎几把乱写
+                ;i:, , ::::iirrririi:i:::iiir2XXvii;L8OGJr71i						服务端脚本：nodejs
+              :,, ,,:   ,::ir@mingyi.irii:i:::j1jri7ZBOS7ivv,						搬砖人：MZLBLOG.COM
+                 ,::,    ::rv77iiiriii:iii:i::,rvLq@huhao.Li						原项目：github.com
+             ,,      ,, ,:ir7ir::,:::i;ir:::i:i::rSGGYri712:
+           :::  ,v7r:: ::rrv77:, ,, ,:i7rrii:::::, ir7ri7Lri
+          ,     2OBBOi,iiir;r::        ,irriiii::,, ,iv7Luur:
+        ,,     i78MBBi,:,:::,:,  :7FSL: ,iriii:::i::,,:rLqXv::
+        :      iuMMP: :,:::,:ii;2GY7OBB0viiii:i:iii:i:::iJqL;::
+       ,     ::::i   ,,,,, ::LuBBu BBBBBErii:i:i:i:i:i:i:r77ii
+      ,       :       , ,,:::rruBZ1MBBqi, :,,,:::,::::::iiriri:
+     ,               ,,,,::::i:  @arqiao.       ,:,, ,:::ii;i7:
+    :,       rjujLYLi   ,,:::::,:::::::::,,   ,:i,:,,,,,::i:iii
+    ::      BBBBBBBBB0,    ,,::: , ,:::::: ,      ,,,, ,,:::::::
+    i,  ,  ,8BMMBBBBBBi     ,,:,,     ,,, , ,   , , , :,::ii::i::
+    :      iZMOMOMBBM2::::::::::,,,,     ,,,,,,:,,,::::i:irr:i:::,
+    i   ,,:;u0MBMOG1L:::i::::::  ,,,::,   ,,, ::::::i:i:iirii:i:i:
+    :    ,iuUuuXUkFu7i:iii:i:::, :,:,: ::::::::i:i:::::iirr7iiri::
+    :     :rk@Yizero.i:::::, ,:ii:::::::i:::::i::,::::iirrriiiri::,
+     :      5BMBBBBBBSr:,::rv2kuii:::iii::,:i:,, , ,,:,:i@petermu.,
+          , :r50EZ8MBBBBGOBBBZP7::::i::,:::::,: :,:,::i;rrririiii::
+              :jujYY7LS0ujJL7r::,::i::,::::::::::::::iirirrrrrrr:ii:
+           ,:  :@kevensun.:,:,,,::::i:i:::::,,::::::iir;ii;7v77;ii;i,
+           ,,,     ,,:,::::::i:iiiii:i::::,, ::::iiiir@xingjief.r;7:i,
+        , , ,,,:,,::::::::iiiiiiiiii:,:,:::::::::iiir;ri7vL77rrirri::
+         :,, , ::::::::i:::i:::i:i::,,,,,:,::i:i:::iir;@Secbone.ii:::
+						 神兽保佑,代码无bug
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>报名参加一周情侣活动</title>
+  <!--表单重复提交-->
+  <script type="text/javascript">
+        var isCommitted = false;//表单是否已经提交标识，默认为false
+        function dosubmit(){
+            if(isCommitted==false){
+                isCommitted = true;//提交表单后，将表单是否已经提交标识设置为true
+                return true;//返回true让表单正常提交
+            }else{
+                return false;//返回false那么表单将不提交
+            }
+        }
+		
+    </script>
+  <!--协议同意js   ©https://blog.csdn.net/lzz781699880/article/details/80854569-->
+  <script type="text/javascript">
+function disable()
+  {
+  document.getElementById("accept").disabled=true
+  }
+function enable()
+  {
+  document.getElementById("accept").disabled=false
+  }
+
+</script>
+   <!--必须点击同意后才能提交表单注册-->
+  <style type="text/css" media="screen, print">
+    @font-face {
+  font-family: MyHelvetica;
+  src: local("Helvetica Neue Bold"),
+  local("HelveticaNeue-Bold"),
+  url(Microsoft JhengHei.ttf);
+  font-weight: bold;
+}
+    body { font-family: "Bitstream Vera Serif Bold", serif }
+  </style>
+  <!--加载字体-->
+  <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/entry.css">
+</head>
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>信息工程学院<small><br>《一周情侣》活动报名</small></h1>
+    </div>
+    <form action="/food-energy/submit" method="post">
+      <div class="form-group">
+        <label for="input-name">姓名</label>
+        <input type="text" class="form-control" id="input-name" name="entry[name]" autofocus required>
+      </div>
+      <div class="form-group">
+        <label for="input-number">学号</label>
+        <input type="number" class="form-control" id="input-number" name="entry[number]" autofocus required>
+      </div>
+      <div class="form-group">
+        <label for="input-qq">QQ号</label>
+        <input type="number" class="form-control" id="input-qq" name="entry[qq]" autofocus required>
+      </div>
+      <div class="form-group">
+        <label for="input-netpan">微信号</label>
+        <input type="text" class="form-control" id="input-netpan" name="entry[netpan]" placeholder="请填写正确的微信号" autofocus required >
+      </div>
+      <div class="form-group">
+        <label for="input-phone">联系电话</label>
+        <input type="tel" class="form-control" id="input-phone" name="entry[phone]" autofocus required>
+      </div>
+      <div class="form-group">
+        <label for="input-minzu">民族</label>
+          <input type="text" class="form-control" id="input-minzu" name="entry[minzu]" placeholder="尽量在同民族内匹配" autofocus required>
+      </div>
+      <div class="form-group">
+        <label for="input-email">邮箱</label>
+        <input type="email" class="form-control" id="input-email" name="entry[email]" autofocus required>
+      </div>
+      <div class="form-group">
+        <label for="input-title">所在院系及班级</label>
+        <input type="text" class="form-control" id="input-title" name="entry[title]" placeholder="例：信息工程学院 软件182班 " autofocus required>
+      </div>
+      <div class="form-group"><!--性别单选项-->
+      <label>性别:</label>
+      <td>
+      <input type="radio" value="1" checked="checked" name="entry[desc]">男
+      <input type="radio" vaule="2" name="entry[desc]">女
+      </td>
+      </div>
+          <div class="form-group">
+        <label for="input-info">你希望匹配的异性具有什么样的优点？20字以内，并作为匹配标准：</label>
+          <textarea class="form-control" name="entry[info]" id="input-info" cols="30" rows="10" placeholder="*请认真填写,也可指定xx学院xx班级xxx，前提是被指定的人也参加本次活动且未指定其他人。 *你也可在此注明你所有要求，例如：我希望在所有民族中随机匹配。" autofocus required></textarea>
+      </div>
+          <div class="form-group">
+        <label for="input-meinfo">你认为你自己的优点是什么？20字以内，并作为被匹配标准：</label>
+          <textarea class="form-control" name="entry[meinfo]" id="input-meinfo" cols="30" rows="10" placeholder="*请认真填写" autofocus required></textarea>
+      </div>
+      <div class="form-group">
+      <td>
+      <input type="checkBox" onclick="if (this.checked) {enable()} else {disable()}" >我已阅读并同意<a href="http://c.mzlblog.com/food-energy/xieyishu.html">《参与协议书》</a>一切后果自负，与活动主办方、相关组织和相关人员无关。
+      </td>
+      </div>
+      <button class="btn btn-success btn-lg" id="accept" type="submit" disabled="true" >立即报名</button>
+    </form>
+  </div>
+</body>
+</html>
