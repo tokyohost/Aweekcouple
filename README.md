@@ -1,7 +1,7 @@
 # Aweekcouple
 一周情侣报名网页系统
 
-USED:
+
 
 系统需要：Centos 7.x or 其他linux 发行版。
 环境：Mongodb nodejs 
@@ -28,8 +28,10 @@ $ node app.js
 通过http://localhost/food-energy/entry.html 进入报名页面，  
 http://localhost/food-energy/1314admin.html 查看报名单。
 
-后台：
+## 后台：
+
 [![capture_20190406230921791.bmp](https://i.loli.net/2019/04/06/5ca8c12f17a2b.bmp)](https://i.loli.net/2019/04/06/5ca8c12f17a2b.bmp)
 
-填表：
+## 填表：
+
 [![capture_20190406230609407.bmp](https://i.loli.net/2019/04/06/5ca8c12f7bb5a.bmp)](https://i.loli.net/2019/04/06/5ca8c12f7bb5a.bmp)
